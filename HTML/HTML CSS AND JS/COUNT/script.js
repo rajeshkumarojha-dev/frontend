@@ -2,7 +2,7 @@
 let count = document.getElementById("count")
 let category = document.getElementById("category")
 
-let i= 0
+let i= 0;
 
 function increment(){
     i++
@@ -38,7 +38,7 @@ function reset(){
     console.log(i)
     if(i==0){
         alert("count clear successfully")
-    category.textContent = "Zero";
+    count.textContent = "Zero";
 
     }
 }
