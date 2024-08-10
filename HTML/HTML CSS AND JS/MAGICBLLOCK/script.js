@@ -1,11 +1,21 @@
 
+
+const popUp = document.querySelector(".pop-up")
+const close = document.querySelector(".close")
+const container = document.querySelector(".container")
+popUp.addEventListener("click",()=>{
+    container.classList.toggle("container-active")
+})
+close.addEventListener("click",()=>{
+    container.classList.remove("container-active")
+})
+
 const selector = document.querySelector("#overlay")
 const puffinClick = document.querySelector(".puffinClick")
 
 puffinClick.addEventListener("click",function(){
     selector.style.animation = "puffIn 2s linear"
 });
-
 
 const selector1 = document.querySelector("#overlay1")
 const puffOut = document.querySelector(".puffOutClick")

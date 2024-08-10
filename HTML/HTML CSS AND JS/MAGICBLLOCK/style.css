@@ -10,14 +10,72 @@ body{
     justify-content: center;
     align-items: center;
 }
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btn-popup{
+  width: 100%;
+  position: absolute;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pop-up{
+  text-align: center;
+  padding: 30px 60px;
+  background-color: rgb(247, 4, 45);
+  color: white;
+  outline: none;
+  border: 2px solid white;
+  border-radius: 20px;
+  font-size: 20px;
+  box-shadow: 0 0 20px white;
+  cursor: pointer;
+  transition: .45s;
+  font-weight: 900;
+}
+.pop-up:hover{
+  color: rgb(247, 4, 45);
+  background-color: white;
+  border: 2px solid rgb(247, 4, 45);
+  box-shadow: 0 0 30px rgb(247, 4, 45);
+}
 .container{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    background: black;
+    box-shadow: 0 0 20px white;
+    border-radius: 20px;
     width: 800px;
+    z-index: 4;
     height: 600px;
     border: 2px solid white;
+    transition: 1s;
+    scale: 0;
+    position: relative;
+    padding: 30px;
+}
+.container-active{
+  scale: 1;
+}
+.close{
+  position: absolute;
+  padding: 10px;
+  top: 0;
+  right: 0px;
+  cursor: pointer;
+}
+.close h1{
+  color: white;
+  font-size: 25px;
+  /* box-shadow: 0 0 20px rgb(230, 16, 52); */
 }
 .content{
     display: flex;
