@@ -5,12 +5,98 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    .container{
+        display: flex;
+
+    }
+    .boxes{
+        margin-inline: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        border: 2px solid black;
+        padding: 30px;
+        border-radius: 20px;
+        flex: 1;
+        flex-direction: column;
+        
+    }
+</style>
 <body>
-    <h1 class="hello">Hello world</h1>
-    <button onclick="change()">Click</button>
-    <script src="script.js"></script>
+    <div class="container"></div>
 </body>
+<!-- 
 <script>
+    const person = [
+      {
+            "name":"raj",
+            'age':50,
+            'gender':"male"
+      },
+      {
+            "name":"swetha",
+            'age':90,
+            'gender':"female"
+      },
+      {
+            "name":"jhon doe",
+            'age':25,
+            'gender':"male"
+      },
+]
+
+const mainDiv = document.querySelector('.container')
+
+function displayData(){
+
+    person.forEach(function(elm){
+        console.log(elm)
+        let box = document.createElement('div')
+        box.classList.add('boxes')
+
+        const title = document.createElement('h5')
+        title.classList.add('title')
+        title.textContent = elm.name
+
+        // ==== create h5=======
+        const age = document.createElement('h6')
+        age.textContent = elm.age
+
+        const gender = document.createElement('h6')
+        gender.textContent = elm.gender
+        box.append(title,age,gender)
+        mainDiv.appendChild(box)
+    })
+}
+displayData() -->
+
+<script>
+let body = document.querySelector('.container')
+let c = 10
+function data(){
+    c--;
+    body.textContent = c;
     
+    if(c<=1){
+        clearInterval(clear)
+    }
+}
+
+let clear = setInterval(data,1000)
+data()
 </script>
 </html>
