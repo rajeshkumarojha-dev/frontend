@@ -69,3 +69,10 @@ li{
     top: -10px;
     font-weight: 900;
 }
+
+@media(max-width: 426px){
+    .container input {
+        width: 70%;
+        padding: 10px;
+    }
+}
