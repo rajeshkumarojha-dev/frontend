@@ -1,6 +1,6 @@
 // url = https://www.omdbapi.com/?s=%22titanic%22&apikey=e735494c
 
-let button = document.querySelector("button");
+let button = document.querySelector(".search");
 let input = document.querySelector(".input-text").value;
 let mainDiv = document.querySelector(".movies");
 let box = document.querySelector(".movies-box");
@@ -53,7 +53,6 @@ let dayNight = document.querySelector('.day-night')
 dayNight.addEventListener('click', ()=>{
     dayNight.querySelector('i').classList.toggle('fa-sun')
     dayNight.querySelector('i').classList.toggle('fa-moon')
-    dayNight.querySelector('i').style.color = 'blue'
 
     document.body.classList.toggle('dark')
 })
@@ -64,4 +63,20 @@ window.addEventListener('load',()=>{
     } else{
         dayNight.querySelector('i').classList.add('fa-moon')
     }
+})
+
+
+let glowingBtn = document.querySelector(".glowing-btn")
+let container = document.querySelector(".box")
+
+glowingBtn.addEventListener("click",()=>{
+  container.classList.add('active')
+  glowingBtn.style.display = 'none'
+})
+
+let close = document.querySelector('.close')
+
+close.addEventListener('click',()=>{
+  container.classList.remove("active")
+  glowingBtn.style.display = 'block'
 })
