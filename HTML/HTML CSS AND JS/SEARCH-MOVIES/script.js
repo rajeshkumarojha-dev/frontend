@@ -19,6 +19,7 @@ fetchData();
 button.addEventListener("click", fetchData);
 
 function displayData(data) {
+  
   mainDiv.textContent = "";
 
   if (movieName == 0) {

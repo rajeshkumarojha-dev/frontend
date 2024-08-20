@@ -3,6 +3,7 @@
 const popUp = document.querySelector(".pop-up")
 const close = document.querySelector(".close")
 const container = document.querySelector(".container")
+
 popUp.addEventListener("click",()=>{
     container.classList.toggle("container-active")
 })
