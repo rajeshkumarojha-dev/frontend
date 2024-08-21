@@ -66,7 +66,11 @@ section{
     background-size: cover;
     background-position: center;
 }
-
+#input-text{
+    position: absolute;
+    top: 120px;
+    right: 430px;
+}
 .text-box{
     margin-top: 20px;
 }
